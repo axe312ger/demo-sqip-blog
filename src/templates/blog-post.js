@@ -48,16 +48,12 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        sqip(
-          numberOfPrimitives: 100
-          blur: 0
-          width: 1180
-          background: "rgb:000000"
-        ) {
-          dataURI
-        }
         sizes(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulSizes_withWebp_noBase64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          sizes
         }
       }
       body {

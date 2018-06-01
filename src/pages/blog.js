@@ -42,17 +42,12 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            sqip(
-              numberOfPrimitives: 25
-              blur: 0
-              width: 350
-              height: 196
-              resizingBehavior: SCALE
-            ) {
-              dataURI
-            }
             sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulSizes_withWebp_noBase64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
           description {
