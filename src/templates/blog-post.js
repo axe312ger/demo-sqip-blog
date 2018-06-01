@@ -49,11 +49,7 @@ export const pageQuery = graphql`
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
         sizes(maxWidth: 1180, background: "rgb:000000") {
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-          sizes
+          ...GatsbyContentfulSizes
         }
       }
       body {

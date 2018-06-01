@@ -48,11 +48,7 @@ export const pageQuery = graphql`
           tags
           heroImage {
             sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              tracedSVG
-              aspectRatio
-              src
-              srcSet
-              sizes
+              ...GatsbyContentfulSizes
             }
           }
           description {
@@ -78,11 +74,7 @@ export const pageQuery = graphql`
               resizingBehavior: PAD
               background: "rgb:000000"
             ) {
-              tracedSVG
-              aspectRatio
-              src
-              srcSet
-              sizes
+              ...GatsbyContentfulSizes
             }
           }
         }
