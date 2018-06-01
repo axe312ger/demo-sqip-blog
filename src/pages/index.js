@@ -47,17 +47,12 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            sqip(
-              numberOfPrimitives: 25
-              blur: 0
-              width: 350
-              height: 196
-              resizingBehavior: SCALE
-            ) {
-              dataURI
-            }
             sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulSizes_withWebp_noBase64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
           description {
@@ -77,23 +72,17 @@ export const pageQuery = graphql`
           }
           title
           heroImage: image {
-            sqip(
-              numberOfPrimitives: 100
-              blur: 0
-              width: 1180
-              height: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              dataURI
-            }
             sizes(
               maxWidth: 1180
               maxHeight: 480
               resizingBehavior: PAD
               background: "rgb:000000"
             ) {
-              ...GatsbyContentfulSizes_withWebp_noBase64
+              tracedSVG
+              aspectRatio
+              src
+              srcSet
+              sizes
             }
           }
         }
