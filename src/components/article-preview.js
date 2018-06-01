@@ -5,13 +5,7 @@ import Img from 'gatsby-image'
 
 export default ({ article }) => (
   <div className={styles.preview}>
-    <Img
-      alt=""
-      sizes={{
-        ...article.heroImage.sizes,
-        base64: article.heroImage.sqip.dataURI,
-      }}
-    />
+    <Img alt="" sizes={article.heroImage.sizes} />
     <h3 className={styles.previewTitle}>
       <Link to={`/blog/${article.slug}`}>{article.title}</Link>
     </h3>

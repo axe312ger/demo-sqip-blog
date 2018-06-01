@@ -27,6 +27,6 @@ module.exports = {
       options: contentfulConfig,
     },
     'gatsby-transformer-sharp',
-    'gatsby-transformer-sqip',
+    'gatsby-plugin-sharp'
   ],
 }
